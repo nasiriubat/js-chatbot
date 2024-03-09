@@ -30,7 +30,7 @@ function displayMessage (message, sender){
 }
 
 async function fetchChatResponse (message){
-    const apiKey = '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';
+    const apiKey = '';
 
     try{
         const url = 'https://api.openai.com/v1/chat/completions';
