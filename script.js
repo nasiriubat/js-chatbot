@@ -1,16 +1,11 @@
 document.getElementById('send-btn').addEventListener('click', function(){
-    // IMplementation Steps
-    // Step:1 Get the input from the input field
+  
 
     const inputElement = document.getElementById('chat-input')
     const message = inputElement.value.trim();
 
-
-    // Step:2 Display the Messages from the User Input
-
     if(message){
         displayMessage(message, 'user');
-        // Step:3 Fetch the GPT assistance reponse and show the reponse in the chatbx
         fetchChatResponse(message);
         inputElement.value = '';
     }
@@ -55,7 +50,6 @@ async function fetchChatResponse (message){
         });
 
         const data = await response.json();
-        console.log(data)
         const replyFromBot =data.choices[0].message.content.trim();
         displayMessage(replyFromBot, 'bot')
 
