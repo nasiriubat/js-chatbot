@@ -25,7 +25,7 @@ function displayMessage (message, sender){
 }
 
 async function fetchChatResponse (message){
-    const apiKey = '';
+    const apiKey = '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';
 
     try{
         const url = 'https://api.openai.com/v1/chat/completions';
